@@ -11,7 +11,6 @@ import HealthPlansPage from "../HealthPlansPage";
 import SearchPage from "../SearchPage";
 import UpdatePage from "../UpdatePage";
 import PaymentPage from "../PaymentPage";
-import Loading from "../LoadingPage";
 
 import { PrivateRoute } from "../../utils/PrivateRoute";
 
@@ -44,7 +43,6 @@ const Content = () => {
         <Route exact path="/login">
           <LoginPage />
         </Route>
-        <PrivateRoute path="/" component={Loading} />
         <PrivateRoute path="/search" component={SearchPage} />
 
         <PrivateRoute path="/create" component={CreatePage} />
