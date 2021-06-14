@@ -48,6 +48,7 @@ const UpdatePage = () => {
         districtName: values.districtName,
         federalDocument: values.federalDocument,
         gender: values.gender,
+        email: values.email,
         name: values.name,
         postalNumber: values.postalNumber,
         stateDocument: values.stateDocument,
@@ -111,6 +112,9 @@ const UpdatePage = () => {
                     </Descriptions.Item>
                     <Descriptions.Item label="RG">
                       {state.stateDocument}
+                    </Descriptions.Item>
+                    <Descriptions.Item label="email">
+                      {state.email}
                     </Descriptions.Item>
                   </Descriptions>
                   <Button type="primary" onClick={showDrawer}>
@@ -221,6 +225,15 @@ const UpdatePage = () => {
                         ]}
                       >
                         <Input placeholder="Insira um número válido." />
+                      </Form.Item>
+                    </Col>
+                    <Col span={24}>
+                      <Form.Item
+                        name="email"
+                        label="Email"
+                        initialValue={state && state.email ? state.email : ""}
+                      >
+                        <Input placeholder="Insira um email válido." />
                       </Form.Item>
                     </Col>
                     <Col span={24}>

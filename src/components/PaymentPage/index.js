@@ -107,6 +107,9 @@ const PaymentPage = () => {
                     <Descriptions.Item label="RG">
                       {state.stateDocument}
                     </Descriptions.Item>
+                    <Descriptions.Item label="email">
+                      {state.email}
+                    </Descriptions.Item>
                   </Descriptions>
                   <Form
                     labelCol={{
@@ -137,6 +140,7 @@ const PaymentPage = () => {
                     <Form.Item
                       label="Email para envio de cobrança:"
                       name="emailPayment"
+                      initialValue={state.email}
                       rules={[
                         {
                           required: true,

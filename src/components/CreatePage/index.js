@@ -37,6 +37,7 @@ const CreatePage = () => {
         districtName: values.districtName,
         federalDocument: values.federalDocument,
         gender: values.gender,
+        email: values.email,
         name: values.name,
         healthPlan: values.healthPlan,
         postalNumber: values.postalNumber,
@@ -184,6 +185,10 @@ const CreatePage = () => {
                     },
                   ]}
                 >
+                  <Input />
+                </Form.Item>
+
+                <Form.Item label="Email" name="email">
                   <Input />
                 </Form.Item>
 
