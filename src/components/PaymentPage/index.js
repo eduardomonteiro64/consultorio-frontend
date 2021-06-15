@@ -19,7 +19,7 @@ const PaymentPage = () => {
 
   const [state, setState] = React.useState(undefined);
 
-  const url = "http://localhost:3003/api/userDataEndpoint";
+  const url = "https://consultorio-backend0.herokuapp.com/api/userDataEndpoint";
 
   const [form] = Form.useForm();
 

@@ -27,7 +27,8 @@ const HistoryPage = () => {
 
   const [form] = Form.useForm();
 
-  const url = "http://localhost:3003/api/userHistoryService";
+  const url =
+    "https://consultorio-backend0.herokuapp.com/api/userHistoryService";
 
   const showAddModal = () => {
     setIsAddModalVisible(true);

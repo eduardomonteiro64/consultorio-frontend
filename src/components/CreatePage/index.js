@@ -25,7 +25,7 @@ const CreatePage = () => {
 
   // const [sended, setSended] = React.useState(false);
 
-  const url = "http://localhost:3003/api/userDataEndpoint";
+  const url = "https://consultorio-backend0.herokuapp.com/api/userDataEndpoint";
 
   const [form] = Form.useForm();
 
@@ -67,7 +67,9 @@ const CreatePage = () => {
 
   React.useEffect(() => {
     axios
-      .get("http://localhost:3003/api/healthPlanDataEndpoint")
+      .get(
+        "https://consultorio-backend0.herokuapp.com/api/healthPlanDataEndpoint"
+      )
       .then((response) => {
         setState({ healthPlans: response.data });
       });

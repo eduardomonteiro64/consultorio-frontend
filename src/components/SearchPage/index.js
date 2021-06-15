@@ -18,7 +18,7 @@ const SearchPage = () => {
   const { Title } = Typography;
   const { Search } = Input;
 
-  const url = "http://localhost:3003/api/userDataEndpoint";
+  const url = "https://consultorio-backend0.herokuapp.com/api/userDataEndpoint";
 
   const [isModalVisible, setIsModalVisible] = React.useState(false);
 

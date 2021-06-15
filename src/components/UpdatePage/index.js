@@ -23,7 +23,7 @@ const UpdatePage = () => {
 
   const [visible, setVisible] = React.useState(false);
 
-  const url = "http://localhost:3003/api/userDataEndpoint";
+  const url = "https://consultorio-backend0.herokuapp.com/api/userDataEndpoint";
 
   const showDrawer = () => {
     setVisible(true);

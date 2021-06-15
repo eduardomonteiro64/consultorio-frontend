@@ -35,7 +35,8 @@ const HealthPlansPage = () => {
     window.location.reload();
   };
 
-  const url = "http://localhost:3003/api/healthPlanDataEndpoint";
+  const url =
+    "https://consultorio-backend0.herokuapp.com/api/healthPlanDataEndpoint";
 
   const [form] = Form.useForm();
 
