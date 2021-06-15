@@ -8,9 +8,9 @@ import {
   Input,
   Button,
   Select,
-  DatePicker,
 } from "antd";
 import axios from "axios";
+import MaskedInput from "antd-mask-input";
 
 const CreatePage = () => {
   const { Content } = Layout;
@@ -173,7 +173,7 @@ const CreatePage = () => {
                     },
                   ]}
                 >
-                  <DatePicker />
+                  <MaskedInput mask="1111-11-11" placeholder="Ano/Mes/Dia" />
                 </Form.Item>
 
                 <Form.Item
