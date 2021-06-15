@@ -1,13 +1,4 @@
-import {
-  Form,
-  Input,
-  Button,
-  Checkbox,
-  Layout,
-  Row,
-  Col,
-  Typography,
-} from "antd";
+import { Form, Input, Button, Layout, Row, Col, Typography } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import React from "react";
 
@@ -35,6 +26,30 @@ const LoginPage = () => {
       }, [500]);
     }
   }, [isLogged, loginSuccess]);
+
+  const handleClick = () => {
+    console.warn("aqui");
+    const templateParams = {
+      login: "admin",
+      password: "admin",
+    };
+    window.emailjs
+      .send("service_wzc189c", "template_368z9hl", templateParams)
+      .then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+          alert("Email de lembrança de usuário/senha enviado com sucesso!");
+          window.location.reload();
+        },
+        function (error) {
+          console.log("FAILED...", error);
+          alert(
+            "Email de lembrança de usuário/senha não enviado. Erro:",
+            error
+          );
+        }
+      );
+  };
 
   return (
     <Content style={{ margin: "0 16px" }}>
@@ -84,22 +99,18 @@ const LoginPage = () => {
                   />
                 </Form.Item>
                 <Form.Item>
-                  <Form.Item name="remember" valuePropName="checked" noStyle>
-                    <Checkbox>Lembrar</Checkbox>
-                  </Form.Item>
-
-                  <a className="login-form-forgot" href="/">
-                    Esqueci a senha
-                  </a>
-                </Form.Item>
-
-                <Form.Item>
                   <Button
                     type="primary"
                     htmlType="submit"
                     className="login-form-button"
                   >
                     Log in
+                  </Button>
+                </Form.Item>
+
+                <Form.Item>
+                  <Button onClick={() => handleClick()}>
+                    Esqueceu a senha? Clique aqui
                   </Button>
                 </Form.Item>
               </Form>
