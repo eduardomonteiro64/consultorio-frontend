@@ -5,7 +5,9 @@ const Footer = () => {
   const { Footer } = Layout;
   return (
     <div>
-      <Footer style={{ textAlign: "center" }}>Página em desenvolvimento</Footer>
+      <Footer style={{ textAlign: "center" }}>
+        JARMEDIC: Website responsivo para consultórios médicos
+      </Footer>
     </div>
   );
 };
