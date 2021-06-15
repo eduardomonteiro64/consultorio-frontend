@@ -147,7 +147,7 @@ const HistoryPage = () => {
                         },
                       ]}
                     >
-                      <Input />
+                      <MaskedInput mask="11.111.111-1" />
                     </Form.Item>
                     <Form.Item
                       name="date"

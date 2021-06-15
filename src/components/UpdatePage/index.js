@@ -180,7 +180,7 @@ const UpdatePage = () => {
                           },
                         ]}
                       >
-                        <Input placeholder="Insira o número do RG." />
+                        <MaskedInput mask="11.111.111-1" />
                       </Form.Item>
                     </Col>
                     <Col span={24}>
@@ -193,7 +193,7 @@ const UpdatePage = () => {
                             : ""
                         }
                       >
-                        <Input placeholder="Insira o número do CPF." />
+                        <MaskedInput mask="111.111.111-1*" />
                       </Form.Item>
                     </Col>
                     <Col span={24}>
@@ -225,7 +225,7 @@ const UpdatePage = () => {
                           },
                         ]}
                       >
-                        <Input placeholder="Insira um número válido." />
+                        <MaskedInput mask="(11)11111-1111" />
                       </Form.Item>
                     </Col>
                     <Col span={24}>
