@@ -60,7 +60,7 @@ const AppointmentPage = () => {
 
   const onFinish = (values) => {
     axios
-      .post(`${url}`, {
+      .post(url, {
         time: values.time,
         date: values.date,
         name: values.name,
